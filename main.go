@@ -55,7 +55,7 @@ func main() {
 	)
 
 	fs.StringVar(&hostname, "hostname", "", "hostname")
-	fs.StringVar(&authKeyPath, "auth-key", configFile("auth_key"), "path to auth key file")
+	fs.StringVar(&authKeyPath, "auth-key", configFile("ts_auth_key"), "path to auth key file")
 	fs.Var(&sshHostKeyPaths, "ssh-host-key", "path to SSH host key")
 
 	if err := fs.Parse(os.Args[1:]); err != nil {
